@@ -1,0 +1,58 @@
+
+<html>
+<head>
+	<title>Log In</title>
+	<link rel="stylesheet" type="text/css" href="css/login_css.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+
+<form class="form-container">
+<h1>Login</h1>
+<label class="lbl">Username</label>
+<input id="username" type="text" placeholder="Enter Username" required>
+<label class="lbl">Password</label>
+<input id="password" type="password" placeholder="Enter Password" required>
+<button type="button" onclick="LogIn()">Login</button>
+</form>
+
+
+
+</body>
+</html>
+<script>
+
+
+
+
+function LogIn()
+{
+	var xhttp = new XMLHttpRequest();
+	var username = document.getElementById('username').value;
+	var password = document.getElementById('password').value;
+	var body = {
+				username: username,
+				password: password
+				};
+
+	$.ajax({
+		url: 'http://localhost:3000/users/login',
+		data: body,
+		type: 'POST',
+		success: function(data){
+			alert(data);
+		},
+		error: function(xhr,status,error)
+		{alert("Error!");
+	}
+
+	});
+
+	xhttp.open("GET",body);
+	xhttp.send();
+}
+</script>
+

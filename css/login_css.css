@@ -1,0 +1,72 @@
+
+body, html{
+	height: 100%;
+	width: 100%;
+	font-family: "Times New Roman", Times, serif;
+	background-color: #092E20;
+}
+
+
+.form-container{
+	
+	height: 400px;
+	width: 300px;
+
+	margin: auto;
+	background-color:#234F32;
+	position: absolute;
+	left:0;
+	right: 0;
+	top:0;
+	bottom: 0;
+
+
+	padding:20px;
+	border-radius: 5px;
+}
+
+h1{
+	color: white;
+	text-align: center;
+}
+
+label{
+	color: white;
+	font-size: 19px;
+	margin-bottom: 200px;
+
+}
+
+.lbl{
+	color: white;
+	font-size: 19px;
+	margin-bottom: 20px;
+}
+
+input[type=text],
+input[type=password]
+{
+	width: 100%;
+	padding: 12px 12px;
+	border: 1px solid #234F32;
+	border-radius: 5px;
+}
+
+input{
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+button[type=button]
+{
+	width: 100%;
+	padding: 12px 12px;
+	border: 2px solid white;
+	border-radius: 5px;
+	color: white;
+
+	margin-top: 20px;
+	font-size: 19px;
+	font-family: "Times New Roman", Times, serif;
+	background-color: #234F32;
+}
