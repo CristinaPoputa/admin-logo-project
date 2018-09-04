@@ -43,7 +43,7 @@ function LogIn()
 		data: body,
 		type: 'POST',
 		success: function(data){
-			alert(data);
+			alert("Hello "+data.user.username);
 		},
 		error: function(xhr,status,error)
 		{alert("Error!");
