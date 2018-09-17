@@ -1,0 +1,90 @@
+<html>
+<head>
+	<!--CSS Style-->
+	<link rel="stylesheet" type="text/css" href="css/home_css.css" >
+	
+	<!--JQuery library-->
+	<script src="./library/jquery/jquery.js"></script>
+	<!--AJAX library-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<!--Bootstrap 4.1.3 Style-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!--Bootstrap 4.1.3 library-->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
+	<!--Font Awesome Style-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	
+	<!--JS file-->
+	<script src="js/tab_content.js"></script>
+	<script src="js/uploadFile.js"></script>
+</head>
+
+
+<body style=" background-color: #f1f1f1; " >
+
+
+	<!--<div class="container-fluid">
+	<div class="row ">
+		<div class="col-sm-12">
+			<div class="navbar">
+				<h3>Workspace</h3>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+	<div id="content-container" class="container-fluid">
+		<div class="row">
+
+			<div class="col-sm-3">
+				<div class="sidebar">
+					<div class="tab">
+					<h5>Workspace</h5>
+					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'premade')">Premade Logos</button>
+					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'icons')">Icons</button>
+					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'frames')">Frames</button>
+					
+					<br>
+					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'gallery')">Gallery</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-9">
+				<div class="content">
+					<div id="account" class="tabcontent">
+						<h5>User profil</h5>
+					</div>
+					<div id="premade" class="tabcontent">
+						<h5>Upload Premade logos</h5>
+						<div class="dropzone" id="premade" ondragover = "ondragoverFnc(event)" ondragleave="ondragleaveFnc(event)" ondrop = "ondropFnc(event)">
+						<input type="file" id="premade_Upload"  style="display: none;" onchange = "handlerFiles(event)" class="text" /><label for="premade_Upload"  ><b>Choose a file</b></label> or drag it here!
+						</div>
+					</div>
+					<div id="icons" class="tabcontent">
+					<h5>Upload Icons</h5>
+						<div class="dropzone" id="icons">
+						<input type="file" id="icons_Upload" style="display: none;" onchange = "handlerFiles(event)" class="text" /><label for="icons_Upload"><b>Choose a file</b></label> or drag it here!
+						</div>
+					</div>
+					<div id="frames" class="tabcontent">
+					<h5>Upload Frames</h5>
+						<div class="dropzone" id="frames">
+						<input type="file" id="frames_Upload" style="display: none;" onchange = "handlerFiles(event)" class="text" /><label for="frames_Upload"><b>Choose a file</b></label> or drag it here!
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+
+		
+	</div>
+
+	<footer id="footer-container" class="container-fluid text-center">
+		<p>Footer</p>
+	</footer>
+</div>
+</body>
+</html>
