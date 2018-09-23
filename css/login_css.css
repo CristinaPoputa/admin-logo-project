@@ -5,7 +5,7 @@ body, html {
 	background-color: #383A56;
 }
 .hero-image {
-  background-image: url("../images/peony.jpg");
+  background-image: url("../images/peony_1.jpg");
   background-color: #cccccc;
   height: 100%;
   background-position: center;
@@ -18,7 +18,7 @@ body, html {
 	
 	height: 450px;
 	width: 300px;
-	opacity: 0.6;
+	opacity: 0.8;
 
 	margin: auto;
 	background-color: white;
@@ -75,7 +75,7 @@ button[type=button]
 }
 
 button:hover{
-background-color: #D8A6B9;
+/*background-color: #D8A6B9;*/
 opacity: 1;
 }
 

@@ -1,6 +1,5 @@
 function LogIn()
 {
-	var xhttp = new XMLHttpRequest();
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
 	var body = {
@@ -25,6 +24,5 @@ function LogIn()
 		{alert("Error!");
 	}
 	});
-	xhttp.open("GET",body);
-	xhttp.send();
+	
 }

@@ -10,9 +10,12 @@ $( document ).ready(function() {
 	tabcontent[i].style.display = "none";
 	}
 	
-	tabactive = document.getElementById("premade");
+	tabactive = document.getElementById("gallery_tab");
 	tabactive.style.display = "block";
+	
+
 });
+
 
 
 function openTab(evt, nameTab)
@@ -37,4 +40,12 @@ function openTab(evt, nameTab)
 	//activate the tab event
 	document.getElementById(nameTab).style.display = 'block';
 	evt.currentTarget.className += " active";
+}
+
+
+//selecte more function
+
+function selectMore()
+{
+	
 }

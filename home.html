@@ -2,7 +2,10 @@
 <head>
 	<!--CSS Style-->
 	<link rel="stylesheet" type="text/css" href="css/home_css.css" >
+	<link rel="stylesheet" type="text/css" href="css/home_gallery.css" >
 	
+	<!--BaguetteBox Style-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 	<!--JQuery library-->
 	<script src="./library/jquery/jquery.js"></script>
 	<!--AJAX library-->
@@ -24,7 +27,6 @@
 
 <body style=" background-color: #f1f1f1; " >
 
-
 	<!--<div class="container-fluid">
 	<div class="row ">
 		<div class="col-sm-12">
@@ -35,56 +37,174 @@
 	</div>
 </div>-->
 
-	<div id="content-container" class="container-fluid">
-		<div class="row">
+<div id="content-container" class="container-fluid">
+	<div class="row">
 
-			<div class="col-sm-3">
-				<div class="sidebar">
-					<div class="tab">
-					<h5>Workspace</h5>
-					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'premade')">Premade Logos</button>
-					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'icons')">Icons</button>
-					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'frames')">Frames</button>
-					
+		<div class="col-sm-3">
+			<div class="sidebar">
+				<div class="tab" style="position: relative;">
+					<h5>Menu</h5>
+					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'gallery_tab')">Gallery</button>
 					<br>
-					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'gallery')">Gallery</button>
-					</div>
+					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'premade_tab')">Premade Logos</button>
+					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'icons_tab')">Icons</button>
+					<button type="button" class="btn btn-default tablinks" onclick="openTab(event,'frames_tab')">Frames</button>
+				
+					<button type="button" class="btn btn-default tablinks" onclick=" ">Log out</button>	
 				</div>
 			</div>
+		</div>
 
-			<div class="col-sm-9">
-				<div class="content">
-					<div id="account" class="tabcontent">
-						<h5>User profil</h5>
+		<div class="col-sm-9">
+			<div class="content" style="height: 97%">
+				<div id="gallery_tab" class="tabcontent" style="height:100%; overflow: auto; ">
+					<h5>Gallery</h5>
+					
+					<div class="tz-gallery">
+						<div class="row" id="gallery-photo">
+						<button type="button" id="delete-btn" class="btn btn-light" onclick="selectMore()">Select more</button>
+						
+							<div class="col-sm-6 col-md-4">
+								<div class="container-photo" style="position: relative;">
+									<a class="lightbox" href="images/bridge.jpg" >
+										<img src="images/bridge.jpg" alt="bridge img">
+									</a>
+									<button type="button" class="btn btn-light"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+									<input type="checkbox">
+								</div>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/peony.jpg" >
+									<div class="container-photo">
+									<img src="images/peony.jpg" alt="peony img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/bridge.jpg" >
+									<div class="container-photo">
+									<img src="images/bridge.jpg" alt="bridge img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/peony.jpg" >
+									<div class="container-photo">
+									<img src="images/peony.jpg" alt="peony img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/bridge.jpg" >
+									<div class="container-photo">
+									<img src="images/bridge.jpg" alt="bridge img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/peony.jpg" >
+									<div class="container-photo">
+									<img src="images/peony.jpg" alt="peony img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/peony.jpg" >
+									<div class="container-photo">
+									<img src="images/peony.jpg" alt="peony img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/bridge.jpg" >
+									<div class="container-photo">
+									<img src="images/bridge.jpg" alt="bridge img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/peony.jpg" >
+									<div class="container-photo">
+									<img src="images/peony.jpg" alt="peony img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/peony.jpg" >
+									<div class="container-photo">
+									<img src="images/peony.jpg" alt="peony img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/bridge.jpg" >
+									<div class="container-photo">
+									<img src="images/bridge.jpg" alt="bridge img">
+									</div>
+								</a>
+							</div>
+							
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="images/peony.jpg" >
+									<div class="container-photo">
+									<img src="images/peony.jpg" alt="peony img">
+									</div>
+								</a>
+							</div>
+						</div>						
 					</div>
-					<div id="premade" class="tabcontent">
-						<h5>Upload Premade logos</h5>
+				</div>
+				
+				<div id="premade_tab" class="tabcontent">
+					<h5>Upload Premade logos</h5>
+						<div class="upload_container">
 						<div class="dropzone" id="premade" ondragover = "ondragoverFnc(event)" ondragleave="ondragleaveFnc(event)" ondrop = "ondropFnc(event)">
-						<input type="file" id="premade_Upload"  style="display: none;" onchange = "handlerFiles(event)" class="text" /><label for="premade_Upload"  ><b>Choose a file</b></label> or drag it here!
+							<input type="file" id="premade_Upload"  style="display: none;" onchange = "handlerFiles(event)" class="text" /><label for="premade_Upload"  ><b>Choose a file</b></label> or drag it here!
 						</div>
-					</div>
-					<div id="icons" class="tabcontent">
+						</div>
+				</div>
+				
+				<div  id="icons_tab" class="tabcontent">
 					<h5>Upload Icons</h5>
-						<div class="dropzone" id="icons">
+					<div class="upload_container">
+					<div class="dropzone" id="icons">
 						<input type="file" id="icons_Upload" style="display: none;" onchange = "handlerFiles(event)" class="text" /><label for="icons_Upload"><b>Choose a file</b></label> or drag it here!
-						</div>
 					</div>
-					<div id="frames" class="tabcontent">
+					</div>
+				</div>
+				
+				<div id="frames_tab" class="tabcontent">
 					<h5>Upload Frames</h5>
-						<div class="dropzone" id="frames">
+					<div class="upload_container">
+					<div class="dropzone" id="frames">
 						<input type="file" id="frames_Upload" style="display: none;" onchange = "handlerFiles(event)" class="text" /><label for="frames_Upload"><b>Choose a file</b></label> or drag it here!
-						</div>
+					</div>
 					</div>
 				</div>
-				</div>
+				
 			</div>
-
-		
+		</div>
 	</div>
 
 	<footer id="footer-container" class="container-fluid text-center">
-		<p>Footer</p>
+		<p>Logo Builder Workspace</p>
 	</footer>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
 </body>
 </html>
