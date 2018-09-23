@@ -32,19 +32,17 @@ router.get('/',function(req,res,next){
 })
 
 
-router.post('/',function(req,res,next){
+router.post('/delete',function(req,res,next){
 	console.log(req.body);
-	var names = req.body.names;
-	// mongo.connection.then(client=>{
-	//    	const dbName = "admin-logo-builder";
-	// 	const db = client.db(dbName);
-	// 	const collection = db.collection('logos');
-	// 	names.forEach(name=>{
-	// 		collection.deleteOne({"name":name},function(err,result){
-	// 			console.log(result);
-	// 		})
-	// 	})
-	// })
+	var name = req.body.name.trim();
+	mongo.connection.then(client=>{
+	   	const dbName = "admin-logo-builder";
+		const db = client.db(dbName);
+		const collection = db.collection('logos');
+		collection.deleteOne({"photo.name":name},function(err,result){
+			res.send({message:"Succes",data:result});
+		})
+	})
 })
 
 

@@ -5,6 +5,7 @@ var formidable = require('formidable');
 var fs = require('fs');
 var moment = require('moment');
 var path = require('path');
+var mv = require('mv');
 
 var dropbox = require('../library/dropboxUpload');
 
@@ -30,7 +31,7 @@ router.post('/',function(req,res,next){
 	    		var ext = file.name.split('.')[file.name.split('.').length-1];
 	    		var name = index+"-"+key+"-"+Date.now().toString()+'.'+ext //key + "-"+Date.now()+'.'+file.name.split('.')[file.name.split('.').length-1];
 	    		var fileName = file.path;
-	    		fs.rename(fileName, fileDir+name, function (err) {
+	    		mv(fileName, fileDir+name, function (err) {
 				    if (err) throw err;
 				    // dropbox.uploadDropbox(fileDir+name);
 				    var time = moment().format().split('+')[0];
@@ -60,7 +61,7 @@ router.post('/',function(req,res,next){
 	    else{
 	    	var ext = files.name.split('.')[files.name.split('.').length-1];
 	    	name = key+"-"+Date.now()+'.'+ext;
-	    	fs.rename(files.path, fileDir+name, function (err) {
+	    	mv(files.path, fileDir+name, function (err) {
 				if (err) throw err;
 				// dropbox.uploadDropbox(fileDir+name);
 				var time = moment().format().split('+')[0];
