@@ -1,16 +1,22 @@
 function ondragoverFnc(event){
 	
 	event.preventDefault();
-	event.target.className =  "dropzone dragover";
 	event.stopPropagation();
-	// if(event.target.id == "premade") this.getElementById("premade_Upload").style.display = "none";
+	if(event.target.id == "premade" || event.target.id == "icons" || event.target.id == "frames")
+	{
+	event.target.className =  "dropzone dragover";
+	}
 }
 
 function ondragleaveFnc(event){
 	
 	event.preventDefault();
 	event.stopPropagation();
+
+	if(event.target.id == "premade" || event.target.id == "icons" || event.target.id == "frames")
+	{
 	event.target.className = "dropzone";
+	}
 }
 
 function ondropFnc(event){
@@ -18,7 +24,12 @@ function ondropFnc(event){
 	event.preventDefault();
 	event.stopPropagation();
 	
+
+	if(event.target.id == "premade" || event.target.id == "icons" || event.target.id == "frames")
+	{
 	event.target.className = "dropzone";
+	}
+
 	upload(event.dataTransfer.files,event.target.id);
 }
 
