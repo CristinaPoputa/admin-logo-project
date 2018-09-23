@@ -6,13 +6,13 @@ function ondragoverFnc(event){
 	{
 	event.target.className =  "dropzone dragover";
 	}
-	
 }
 
 function ondragleaveFnc(event){
 	
 	event.preventDefault();
 	event.stopPropagation();
+
 	if(event.target.id == "premade" || event.target.id == "icons" || event.target.id == "frames")
 	{
 	event.target.className = "dropzone";
@@ -24,10 +24,12 @@ function ondropFnc(event){
 	event.preventDefault();
 	event.stopPropagation();
 	
+
 	if(event.target.id == "premade" || event.target.id == "icons" || event.target.id == "frames")
 	{
 	event.target.className = "dropzone";
 	}
+
 	upload(event.dataTransfer.files,event.target.id);
 }
 
@@ -50,7 +52,7 @@ function upload(files,id){
 		formData.append(id,files[i]);
 	}
 	
-	xhr.open('POST','http://localhost:3000/users/upload');
+	xhr.open('POST','http://localhost:3000/upload');
 	xhr.send(formData);
 	
 }
