@@ -32,7 +32,7 @@ router.post('/',function(req,res,next){
 	    		var fileName = file.path;
 	    		fs.rename(fileName, fileDir+name, function (err) {
 				    if (err) throw err;
-				    dropbox.uploadDropbox(fileDir+name);
+				    // dropbox.uploadDropbox(fileDir+name);
 				    var time = moment().format().split('+')[0];
 				    var insertObj = {
 	    				type: key,
@@ -62,7 +62,7 @@ router.post('/',function(req,res,next){
 	    	name = key+"-"+Date.now()+'.'+ext;
 	    	fs.rename(files.path, fileDir+name, function (err) {
 				if (err) throw err;
-				dropbox.uploadDropbox(fileDir+name);
+				// dropbox.uploadDropbox(fileDir+name);
 				var time = moment().format().split('+')[0];
 				    var insertObj = {
 	    				type: key,
